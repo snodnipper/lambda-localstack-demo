@@ -1,0 +1,5 @@
+FROM amazon/aws-cli:latest
+RUN mkdir -p /root/.aws && \
+    echo "[default]\naws_access_key_id=test\naws_secret_access_key=test\nregion=us-east-1" > /root/.aws/credentials && \
+    echo "[default]\nregion=us-east-1\nendpoint_url=http://localhost:4566" > /root/.aws/config
+ENTRYPOINT ["aws"]
