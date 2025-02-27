@@ -9,3 +9,9 @@ docker-compose up -d
 ./invoke.sh
 
 ```
+
+Assuming that invoke.sh is successful, one should see:
+
+```json
+{"statusCode": 200, "body": "{\"greeting\": \"Hello, Alice\"}"}
+```
